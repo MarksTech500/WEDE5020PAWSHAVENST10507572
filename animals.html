@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://images.unsplash.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Dogs &amp; Cats for Adoption in Springs, Gauteng | Paws Haven</title>
+    <meta name="description" content="Meet the rescue dogs and cats looking for loving forever homes at Paws Haven in Springs, Gauteng. Search by breed or age and start an adoption enquiry today.">
+    <link rel="canonical" href="https://pawshaven-st10507572.netlify.app/animals.html">
+    <meta name="theme-color" content="#2f6f4e">
+    <meta name="author" content="Mikail Marks (ST10507572)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Paws Haven Animal Rescue">
+    <meta property="og:title" content="Dogs &amp; Cats for Adoption in Springs, Gauteng | Paws Haven">
+    <meta property="og:description" content="Meet the rescue dogs and cats looking for loving forever homes at Paws Haven in Springs, Gauteng. Search by breed or age and start an adoption enquiry today.">
+    <meta property="og:url" content="https://pawshaven-st10507572.netlify.app/animals.html">
+    <meta property="og:image" content="https://pawshaven-st10507572.netlify.app/images/og-paws-haven.jpg">
+    <meta property="og:image:alt" content="Paws Haven Animal Rescue logo">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dogs &amp; Cats for Adoption in Springs, Gauteng | Paws Haven">
+    <meta name="twitter:description" content="Meet the rescue dogs and cats looking for loving forever homes at Paws Haven in Springs, Gauteng. Search by breed or age and start an adoption enquiry today.">
+    <meta name="twitter:image" content="https://pawshaven-st10507572.netlify.app/images/og-paws-haven.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="animals">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="container navbar">
+        <a class="logo" href="index.html" aria-label="Paws Haven Animal Rescue - home"><img src="images/paws-haven-logo.jpg" alt="Paws Haven Animal Rescue logo" width="480" height="386"></a>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+
+        <nav aria-label="Main navigation">
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="animals.html" class="active" aria-current="page">Animals</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="vaccination.html">Vaccination</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="page-banner">
+        <div class="container">
+            <h1>Dogs and Cats for Adoption in Springs</h1>
+            <p>Meet some of the animals who are waiting for their forever families.</p>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="animals-heading">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2 id="animals-heading">Find Your New Best Friend</h2>
+                <p>Search by name or breed, then filter and sort to find the right match.</p>
+            </div>
+
+            <form class="animal-toolbar" id="animal-filters" role="search" aria-label="Search and filter animals">
+                <div class="toolbar-grid">
+                    <div class="search-field">
+                        <label for="animal-search">Search</label>
+                        <input type="search" id="animal-search" placeholder="Try &quot;beagle&quot;, &quot;kitten&quot; or &quot;Max&quot;" autocomplete="off" maxlength="60">
+                    </div>
+                    <div>
+                        <label for="filter-species">Animal</label>
+                        <select id="filter-species">
+                            <option value="all">Dogs and cats</option>
+                            <option value="Dog">Dogs</option>
+                            <option value="Cat">Cats</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="filter-age">Age</label>
+                        <select id="filter-age">
+                            <option value="all">Any age</option>
+                            <option value="baby">Under 1 year</option>
+                            <option value="young">1 to 2 years</option>
+                            <option value="adult">3 years and older</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sort-animals">Sort by</label>
+                        <select id="sort-animals">
+                            <option value="name-asc">Name (A to Z)</option>
+                            <option value="name-desc">Name (Z to A)</option>
+                            <option value="age-asc">Youngest first</option>
+                            <option value="age-desc">Oldest first</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="toolbar-row">
+                    <label class="check" for="filter-available"><input type="checkbox" id="filter-available"> Show available animals only</label>
+                    <button type="button" class="link-button" data-reset-filters>Clear all filters</button>
+                </div>
+            </form>
+
+            <p class="results-count" id="results-count" role="status" aria-live="polite"></p>
+
+            <div class="animal-grid" id="animal-grid"></div>
+
+            <div class="empty-state" id="no-results" hidden>
+                <h3>No animals match your search</h3>
+                <p>Try a different word or remove some filters.</p>
+                <button type="button" class="btn btn-green" data-reset-filters>Show all animals</button>
+            </div>
+
+            <noscript>
+                <p class="empty-state">The animal list needs JavaScript. Our animals are Max, Luna, Rocky, Buddy, Milo, Daisy, Oliver and Charlie -
+                    please <a href="contact.html">contact us</a> to ask about them.</p>
+            </noscript>
+        </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="gallery-heading">
+        <div class="container">
+            <div class="section-heading">
+                <h2 id="gallery-heading">Photo Gallery</h2>
+                <p>Select a photo to view it larger. Use the arrow keys or swipe to move between photos.</p>
+            </div>
+            <ul class="gallery" id="gallery"></ul>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="process-heading">
+        <div class="container">
+            <div class="info-box">
+                <h2 id="process-heading">Adoption Process</h2>
+                <p>
+                    Potential adopters should submit an enquiry and
+                    provide the required information. The organisation
+                    can then assess whether the animal and adopter are
+                    a suitable match. Every adopted animal also receives an eligible first vaccination
+                    free through our <a href="vaccination.html">vaccination programme</a>.
+                </p>
+
+                <a class="btn btn-primary" href="enquiry.html?type=adoption#enquiry-form">Start an Enquiry</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <h2>&#128062; Paws Haven Animal Rescue</h2>
+            <p>Helping vulnerable animals find safety, care and loving forever homes.</p>
+            <div class="share-links" data-share aria-label="Share this page"></div>
+        </div>
+
+        <div>
+            <h2>Quick Links</h2>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="animals.html">Animals</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="vaccination.html">Vaccination</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Contact</h2>
+            <address>
+                <p>Shop 9, Springs Mall<br>Jan Smuts Road, Springs, 1559<br>Gauteng, South Africa</p>
+                <p>Email: <a href="mailto:infopawshaven@hotmail.com">infopawshaven@hotmail.com</a></p>
+                <p>Phone: <a href="tel:0110000000">011 000 0000</a></p>
+            </address>
+        </div>
+    </div>
+
+    <div class="container copyright">
+        <p>&copy; <span class="current-year">2026</span> Paws Haven Animal Rescue. Student project.</p>
+    </div>
+</footer>
+
+<script src="js/data.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="vendor/jquery/jquery.min.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/animals.js" defer></script>
+</body>
+</html>

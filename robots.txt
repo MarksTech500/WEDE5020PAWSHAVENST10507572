@@ -1,0 +1,6 @@
+# robots.txt for Paws Haven Animal Rescue
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://pawshaven-st10507572.netlify.app/sitemap.xml

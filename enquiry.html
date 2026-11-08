@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://images.unsplash.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Adoption, Volunteer &amp; Sponsorship Enquiry | Paws Haven</title>
+    <meta name="description" content="Ask Paws Haven about adopting a rescue pet, volunteering or sponsoring an animal in Springs, Gauteng. Get adoption fees, availability and next steps instantly.">
+    <link rel="canonical" href="https://pawshaven-st10507572.netlify.app/enquiry.html">
+    <meta name="theme-color" content="#2f6f4e">
+    <meta name="author" content="Mikail Marks (ST10507572)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Paws Haven Animal Rescue">
+    <meta property="og:title" content="Adoption, Volunteer &amp; Sponsorship Enquiry | Paws Haven">
+    <meta property="og:description" content="Ask Paws Haven about adopting a rescue pet, volunteering or sponsoring an animal in Springs, Gauteng. Get adoption fees, availability and next steps instantly.">
+    <meta property="og:url" content="https://pawshaven-st10507572.netlify.app/enquiry.html">
+    <meta property="og:image" content="https://pawshaven-st10507572.netlify.app/images/og-paws-haven.jpg">
+    <meta property="og:image:alt" content="Paws Haven Animal Rescue logo">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adoption, Volunteer &amp; Sponsorship Enquiry | Paws Haven">
+    <meta name="twitter:description" content="Ask Paws Haven about adopting a rescue pet, volunteering or sponsoring an animal in Springs, Gauteng. Get adoption fees, availability and next steps instantly.">
+    <meta name="twitter:image" content="https://pawshaven-st10507572.netlify.app/images/og-paws-haven.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="enquiry">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+    <div class="container navbar">
+        <a class="logo" href="index.html" aria-label="Paws Haven Animal Rescue - home"><img src="images/paws-haven-logo.jpg" alt="Paws Haven Animal Rescue logo" width="480" height="386"></a>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+
+        <nav aria-label="Main navigation">
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="animals.html">Animals</a></li>
+                <li><a href="enquiry.html" class="active" aria-current="page">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="vaccination.html">Vaccination</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="page-banner">
+        <div class="container">
+            <h1>Make an Enquiry</h1>
+            <p>Get in touch with Paws Haven about adoption, volunteering or sponsorship.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+                <div class="section-heading">
+                    <h2>Enquiry Form</h2>
+                    <p>
+                        Tell us what you are interested in and we will show you the cost and availability straight away.
+                        Fields marked <span class="req">*</span> are required.
+                    </p>
+                </div>
+
+                <form id="enquiry-form" name="enquiry" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="enquiry">
+                    <p class="hp-field" aria-hidden="true"><label>Leave this empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+                    <div class="form-summary" role="alert" tabindex="-1" hidden></div>
+
+                    <div class="form-grid">
+        <div class="form-group">
+            <label for="enq-name">Full name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="enq-name" name="name" autocomplete="name" placeholder="Enter your full name" required minlength="2" maxlength="60" data-validate="name" data-label="your full name">
+            <span class="field-error" id="enq-name-error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+            <label for="enq-email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="enq-email" name="email" autocomplete="email" placeholder="name@example.com" required maxlength="254" data-validate="email" data-label="your email address">
+            <span class="field-error" id="enq-email-error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+            <label for="enq-phone">Phone number <span class="hint">(optional)</span></label>
+            <span class="hint" id="enq-phone-hint">South African format, e.g. 082 123 4567</span>
+            <input type="tel" id="enq-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="082 123 4567" maxlength="20" pattern="[0-9+ ()\-]{9,20}" data-validate="phone" data-label="your phone number">
+            <span class="field-error" id="enq-phone-error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+            <label for="enq-type">What is your enquiry about? <span class="req" aria-hidden="true">*</span></label>
+            <select id="enq-type" name="type" required data-validate="select" data-label="an enquiry type"><option value="" selected disabled>Select an option</option><option value="adoption">Adopting an animal</option><option value="volunteer">Volunteering</option><option value="sponsor">Sponsoring an animal</option><option value="general">General enquiry</option></select>
+            <span class="field-error" id="enq-type-error" aria-live="polite"></span>
+        </div>
+        <fieldset class="form-section" data-for="adoption" hidden disabled>
+            <legend>Adoption details</legend>
+            <div class="form-grid">
+        <div class="form-group full">
+            <label for="enq-animal">Animal of interest <span class="req" aria-hidden="true">*</span></label>
+            <select id="enq-animal" name="animal" data-validate="select" data-label="an animal"><option value="" selected disabled>Select an animal</option></select>
+            <span class="field-error" id="enq-animal-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="enq-home">Type of home <span class="req" aria-hidden="true">*</span></label>
+            <select id="enq-home" name="home" data-validate="select" data-label="your type of home"><option value="" selected disabled>Select your home type</option><option value="house_garden">House with a garden</option><option value="house_no_garden">House without a garden</option><option value="flat">Flat / apartment</option><option value="smallholding">Farm or smallholding</option></select>
+            <span class="field-error" id="enq-home-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="enq-household">People in your household <span class="req" aria-hidden="true">*</span></label>
+            <input type="number" id="enq-household" name="household" min="1" max="12" step="1" inputmode="numeric" placeholder="e.g. 3" data-validate="number" data-label="the number of people in your household">
+            <span class="field-error" id="enq-household-error" aria-live="polite"></span>
+        </div>
+
+                <fieldset class="form-group full" id="enq-pets" data-validate="group" data-error="Please tell us whether you have other pets.">
+                    <legend>Do you have other pets? <span class="req" aria-hidden="true">*</span></legend>
+                    <div class="choice-list">
+                        <label class="check" for="enq-pets-yes"><input type="radio" id="enq-pets-yes" name="pets" value="yes"> Yes</label>
+                        <label class="check" for="enq-pets-no"><input type="radio" id="enq-pets-no" name="pets" value="no"> No</label>
+                    </div>
+                    <span class="field-error" id="enq-pets-error" aria-live="polite"></span>
+                </fieldset>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section" data-for="volunteer" hidden disabled>
+            <legend>Volunteer details</legend>
+            <div class="form-grid">
+                <fieldset class="form-group full" id="enq-areas" data-validate="group" data-error="Please choose at least one area you would like to help with.">
+                    <legend>Where would you like to help? <span class="req" aria-hidden="true">*</span></legend>
+                    <div class="choice-list" id="enq-areas-list"></div>
+                    <span class="field-error" id="enq-areas-error" aria-live="polite"></span>
+                </fieldset>
+        <div class="form-group">
+            <label for="enq-start">Preferred start date <span class="req" aria-hidden="true">*</span></label>
+            <span class="hint" id="enq-start-hint">Within the next 12 months</span>
+            <input type="date" id="enq-start" name="start_date" data-validate="date" data-label="a start date">
+            <span class="field-error" id="enq-start-error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="enq-availability">When are you available? <span class="req" aria-hidden="true">*</span></label>
+            <select id="enq-availability" name="availability" data-validate="select" data-label="your availability"><option value="" selected disabled>Select your availability</option><option value="weekdays">Weekdays</option><option value="weekends">Weekends</option><option value="both">Weekdays and weekends</option></select>
+            <span class="field-error" id="enq-availability-error" aria-live="polite"></span>
+        </div>
+
+            </div>
+        </fieldset>
+
+        <fieldset class="form-section" data-for="sponsor" hidden disabled>
+            <legend>Sponsorship details</legend>
+            <div class="form-grid">
+        <div class="form-group">
+            <label for="enq-tier">Sponsorship amount <span class="req" aria-hidden="true">*</span></label>
+            <select id="enq-tier" name="tier" data-validate="select" data-label="a sponsorship amount"><option value="" selected disabled>Select an amount</option></select>
+            <span class="field-error" id="enq-tier-error" aria-live="polite"></span>
+        </div>
+
+                <fieldset class="form-group" id="enq-frequency" data-validate="group" data-error="Please choose how often you would like to sponsor.">
+                    <legend>How often? <span class="req" aria-hidden="true">*</span></legend>
+                    <div class="choice-list">
+                        <label class="check" for="enq-freq-monthly"><input type="radio" id="enq-freq-monthly" name="frequency" value="monthly" checked> Monthly</label>
+                        <label class="check" for="enq-freq-once"><input type="radio" id="enq-freq-once" name="frequency" value="once-off"> Once-off</label>
+                    </div>
+                    <span class="field-error" id="enq-frequency-error" aria-live="polite"></span>
+                </fieldset>
+            </div>
+        </fieldset>
+
+        <div class="form-group full">
+            <label for="enq-message">Your message <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="enq-message" name="message" rows="6" required minlength="10" maxlength="1000" placeholder="Tell us how we can help..." data-validate="message" data-label="Your message"></textarea>
+            <span class="char-count" id="enq-message-count" data-counter-for="enq-message" aria-hidden="true"></span>
+            <span class="field-error" id="enq-message-error" aria-live="polite"></span>
+        </div>
+        <div class="form-group full">
+            <label class="check" for="enq-consent"><input type="checkbox" id="enq-consent" name="consent" value="yes" required data-validate="checkbox" data-error="Please tick the box so we may use your details to reply."> I agree that Paws Haven may use these details to reply to my enquiry. <span class="req" aria-hidden="true">*</span></label>
+            <span class="field-error" id="enq-consent-error" aria-live="polite"></span>
+            <p class="privacy-note">We only use your details to answer this enquiry and never share them (POPIA).</p>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Submit Enquiry</button>
+        </div>
+                    </div>
+
+                    <p class="ajax-status" id="ajax-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <section class="answer-panel" id="enquiry-response" aria-live="polite" hidden></section>
+        </div>
+    </section>
+
+    <section class="faq-section section-alt" aria-labelledby="faq-heading">
+        <div class="container">
+            <div class="section-heading">
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
+                <p>Quick answers before you send your enquiry.</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3><button class="accordion-trigger" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">How much does it cost to adopt?</button></h3>
+                    <div class="accordion-panel" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+                        <p>Our adoption fee is R850 for a dog and R650 for a cat. Choose &ldquo;Adopting an animal&rdquo; in the form above to see the exact fee for the animal you are interested in.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button class="accordion-trigger" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Are adopted animals vaccinated?</button></h3>
+                    <div class="accordion-panel" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+                        <p>Yes. Every adopted animal receives an eligible first vaccination at no extra charge. Annual vaccinations afterwards are a subsidised R150. Read more on our <a href="vaccination.html">vaccination programme</a> page.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button class="accordion-trigger" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">Can I volunteer, and does it cost anything?</button></h3>
+                    <div class="accordion-panel" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+                        <p>Volunteering is free. Choose &ldquo;Volunteering&rdquo; in the form to pick where you would like to help and to see the date of the next orientation session.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button class="accordion-trigger" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">How does sponsorship work?</button></h3>
+                    <div class="accordion-panel" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+                        <p>You can sponsor from R50 to R500, monthly or once-off. We only share banking details directly with you, so please use only verified Paws Haven donation details. You can also see all the options on the <a href="donate.html">donate page</a>.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button class="accordion-trigger" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">How long until I hear back?</button></h3>
+                    <div class="accordion-panel" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
+                        <p>We aim to reply within 2 working days. For anything else, please use our <a href="contact.html">contact page</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <h2>&#128062; Paws Haven Animal Rescue</h2>
+            <p>Helping vulnerable animals find safety, care and loving forever homes.</p>
+            <div class="share-links" data-share aria-label="Share this page"></div>
+        </div>
+
+        <div>
+            <h2>Quick Links</h2>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="animals.html">Animals</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="vaccination.html">Vaccination</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Contact</h2>
+            <address>
+                <p>Shop 9, Springs Mall<br>Jan Smuts Road, Springs, 1559<br>Gauteng, South Africa</p>
+                <p>Email: <a href="mailto:infopawshaven@hotmail.com">infopawshaven@hotmail.com</a></p>
+                <p>Phone: <a href="tel:0110000000">011 000 0000</a></p>
+            </address>
+        </div>
+    </div>
+
+    <div class="container copyright">
+        <p>&copy; <span class="current-year">2026</span> Paws Haven Animal Rescue. Student project.</p>
+    </div>
+</footer>
+
+<script src="js/data.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="vendor/jquery/jquery.min.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/forms.js" defer></script>
+</body>
+</html>
